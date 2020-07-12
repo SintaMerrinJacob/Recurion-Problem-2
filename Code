@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int getsum(int n, int sum)
+{
+   if(n<=9)
+     return n+sum;
+   sum += n%10;
+   getsum(n/10,sum);
+}
+int main()
+{ int n,sum=0;
+  cin>>n;
+  int ans= getsum(n,sum);
+  cout<<ans;
+}
